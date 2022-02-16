@@ -29,6 +29,10 @@ Approach 2: Add base 0 values to CoST data
 - Step 4: Reshape the training and test data into 3D data grouped by ['subject', ' variant', ' gesture', 'iteration']
 - Step 5: Calculate the longest length and take the difference between the longest and shortest frame. The insert the zeroes to match the difference towards the end of the sample get equal length samples using resample() and interpolate(). Convert processed data into .npy files
 
+Approach 3: Repeat samples frames to get equal length samples
+- Reshape data into 3 D data using group by 
+- Repeat list values until length is 1747(longest frame lenght)
+
 Results: 
 Linearly Interpolated: 7% accuracy
 Base zero: 31% accuracy
